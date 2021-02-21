@@ -62,3 +62,11 @@ export const logoutUser = () => (dispatch) => {
   // Set current user to empty object {} which will set isAuthenticated to false
   dispatch(setCurrentUser({}));
 };
+// Handle a time block
+export const addEvent = (data) => (dispatch) => {
+  axios
+    .post("http://localhost:5000/api/users/events", data)
+    .then((res) => {
+      console.log(res);
+    })
+};

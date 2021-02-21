@@ -8,6 +8,10 @@ import interactionPlugin from "@fullcalendar/interaction";
 
 class StudentPage extends Component {
   handleDateSelect(e) {
+    var startd = new Date(e.start)
+    var endd = new Date(e.end)
+    let startend = [startd.getTime() / 1000, endd.getTime() / 1000]
+    console.log(startend)
     console.log(e);
   }
   render() {
